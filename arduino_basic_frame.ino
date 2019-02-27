@@ -1,3 +1,12 @@
+//useful resource:
+
+//https://www.hackerearth.com/blog/internet-of-things/arduino-programming-for-beginners/
+//https://www.sunfounder.com/blog/rpi-ard/
+
+//for reference to "serial" lib
+//https://www.arduino.cc/reference/en/language/functions/communication/serial/
+
+
 //initialize operation struct
 struct operation{
   int pipe_1;
@@ -29,6 +38,8 @@ void loop( ) // The loop function runs again and again
                 pump_op = (pump_op)(Serial.read());
                 //or some where alone the line
                 
+                //handle bad input
+    
                 // processing incoming message
                 if(pump_op.pipe_1 > 0){
                   digitalWrite (PUMP_1,HIGH); // Turn ON the PUMP_N
